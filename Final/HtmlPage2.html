@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.5.0.min.js"></script>
+    <link href="bootstrap-4.5.0-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <title>抽牌介面(愛情)</title>
+    <style>
+        #123 {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var x;
+        function change() {
+            x = parseInt(Math.random() * (36));
+            document.write('<img src="images/0' + x + '.png">');
+            if (x == 0) {
+                document.write('<br><font size="5">推薦飲料:泡沫紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x0()>');
+
+            }
+            if (x == 1) {
+                document.write('<br><font size="5">推薦飲料:蜂蜜檸檬');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x1()>');
+
+            }
+            if (x == 2) {
+                document.write('<br><font size="5">推薦飲料:茉莉綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x2()>');
+
+            }
+            if (x == 3) {
+                document.write('<br><font size="5">推薦飲料:檸檬綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x3()>');
+
+            }
+            if (x == 4) {
+                document.write('<br><font size="5">推薦飲料:四季青茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x4()>');
+
+            }
+            if (x == 5) {
+                document.write('<br><font size="5">推薦飲料:檸檬紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x5()>');
+
+            }
+            if (x == 6) {
+                document.write('<br><font size="5">推薦飲料:鐵觀音茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x6()>');
+            }
+            if (x == 7) {
+                document.write('<br><font size="5">推薦飲料:烏龍拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x7()>');
+            }
+            if (x == 8) {
+                document.write('<br><font size="5">推薦飲料:冬瓜茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x8()>');
+            }
+            if (x == 9) {
+                document.write('<br><font size="5">推薦飲料:冬瓜拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x9()>');
+            }
+            if (x == 10) {
+                document.write('<br><font size="5">推薦飲料:烏龍茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x10()>');
+            }
+            if (x == 11) {
+                document.write('<br><font size="5">推薦飲料:觀音拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x11()>');
+            }
+            if (x == 12) {
+                document.write('<br><font size="5">推薦飲料:百香多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x12()>');
+            }
+            if (x == 13) {
+                document.write('<br><font size="5">推薦飲料:四季拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x13()>');
+            }
+            if (x == 14) {
+                document.write('<br><font size="5">推薦飲料:綠茶多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x14()>');
+            }
+            if (x == 15) {
+                document.write('<br><font size="5">推薦飲料:綠茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x15()>');
+            }
+            if (x == 16) {
+                document.write('<br><font size="5">推薦飲料:檸檬多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x16()>');
+            }
+            if (x == 17) {
+                document.write('<br><font size="5">推薦飲料:紅茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x17()>');
+            }
+            if (x == 18) {
+                document.write('<br><font size="5">推薦飲料:紅茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x18()>');
+            }
+            if (x == 19) {
+                document.write('<br><font size="5">推薦飲料:泡沫紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x19()>');
+            }
+            if (x == 20) {
+                document.write('<br><font size="5">推薦飲料:百香多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x20()>');
+            }
+            if (x == 21) {
+                document.write('<br><font size="5">推薦飲料:檸檬紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x21()>');
+            }
+            if (x == 22) {
+                document.write('<br><font size="5">推薦飲料:綠茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x22()>');
+            }
+            if (x == 23) {
+                document.write('<br><font size="5">推薦飲料:茉莉綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x23()>');
+            }
+            if (x == 24) {
+                document.write('<br><font size="5">推薦飲料:綠茶多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x24()>');
+            }
+            if (x == 25) {
+                document.write('<br><font size="5">推薦飲料:檸檬綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x25()>');
+            }
+            if (x == 26) {
+                document.write('<br><font size="5">推薦飲料:四季拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x26()>');
+            }
+            if (x == 27) {
+                document.write('<br><font size="5">推薦飲料:四季青茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x27()>');
+            }
+            if (x == 28) {
+                document.write('<br><font size="5">推薦飲料:檸檬多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x28()>');
+            }
+            if (x == 29) {
+                document.write('<br><font size="5">推薦飲料:蜂蜜檸檬');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x29()>');
+            }
+            if (x == 30) {
+                document.write('<br><font size="5">推薦飲料:觀音拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x30()>');
+            }
+            if (x == 31) {
+                document.write('<br><font size="5">推薦飲料:烏龍茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x31()>');
+            }
+            if (x == 32) {
+                document.write('<br><font size="5">推薦飲料:冬瓜拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x32()>');
+            }
+            if (x == 33) {
+                document.write('<br><font size="5">推薦飲料:冬瓜茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x33()>');
+            }
+            if (x == 34) {
+                document.write('<br><font size="5">推薦飲料:鐵觀音茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x34()>');
+            }
+            if (x == 35) {
+                document.write('<br><font size="5">推薦飲料:烏龍拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x35()>');
+            }
+
+            document.title = "答案";
+        }
+        function x0() {
+            var r = confirm("兩次的失敗不要放在心上，太過在意只會讓你更無法專心讀書。不要害怕向人求助，多多發問也是學習的不二法門，觀察別人的學習方法，調整自己的學習態度，才能日益精進。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x1() {
+            var r = confirm("愛情不能光是等待，勇氣能帶來契機。遇到阻礙也別輕言放棄，堅持到底就能擄獲對方的心。獨立、自信是魅力的關鍵，兩人在一起是要能一起實驗彼此的理想，而非阻礙彼此的腳步。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x2() {
+            var r = confirm("享受被愛的幸福，沉浸在愛情的喜悅中，包容力是這段感情的關鍵，偶有爭執也不需看得過重，隨時關懷對方的狀態，喜怒哀樂一起分享，你們的未來是相當值得期待的。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x3() {
+            var r = confirm("溝通與體諒讓彼此在熱情過後，仍能擁有永恆的愛情。不追求讓人心跳加速的戀愛，在平靜的氣氛中，電流正緩緩流通在你們兩人之中，知性的交談與來往，可以引導你們走向戀愛的路途。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x4() {
+            var r = confirm("自由無拘的戀情是最適合你的戀情。不必刻意尋求，不經意中，便會撞上一段浪漫的愛情。你天生具有魅力，會為你吸引來眾多的追求者。然而，害怕束縛的個性，讓你不願許下承認，更別說要走進禮堂了！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x5() {
+            var r = confirm("曖昧不清的狀況告一段落，終於確認了彼此的心意，變成人人欽羨、情投意合的一對。發現心上人的機率大增，可能就在你的身邊，正視自己的感覺，千萬別錯過良緣囉。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x6() {
+            var r = confirm("前方的路坎坷不已，橫跨在眼前的考驗更是一層接一層。懂得忍耐、包容才能得到最終的愛。怕受傷就永遠不會前進，接受考驗，體認某些犧牲是必要的。如此你們的未來才有一線曙光。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x7() {
+            var r = confirm("出現理想的對象，然而卻彷彿遙不可及，讓你不敢靠近。不用害怕，拿出自信與勇氣，不慌不急，一步一步向他靠近，讓愛情在不知不覺中誕生，多增加彼此的知性交流也是很重要的哦。理想與實際的差距，靠的不是口頭來拉近，而是堅持與努力，看似遙遠的目標，只要心意堅定，就永遠都在，等著你向它靠近，如果害怕周遭的看法，甚至否定了自己那就什麼也做不到了。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x8() {
+            var r = confirm("彷彿命中註定般，遇見讓你一見鍾情的對象。順著你的感覺走，該告白的時候就不用再猶豫了，你們之間有很大的機會。把握每一個增加兩人彼此認識的機會吧，你們之間的故事才正要開始呢。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x9() {
+            var r = confirm("活潑的魅力吸引到不少的異性，追求者也不少。若遇到情投意合的對象，就放大膽的表明心意吧，積極的態度會帶來好運哦！若是戀情上遇到問題，與其沉默不語，不如大家攤開來說會更好。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x10() {
+            var r = confirm("再多的阻礙都妨礙不了你們的愛情。經得起考驗的愛情才能久久遠遠。要相信自己的選擇，用真誠融解周遭的反對，如果連自己都猶疑不決的話，如何期盼戀情能夠開花結果呢？");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x11() {
+            var r = confirm("陷入盲目的愛情，難不清真正的自我，一昧地委屈自己，配合著對方的步驟，幾乎可說是自虐式的愛情觀。關係中浮現出的慾望與誘惑，混淆了愛情的真諦，即使明知不被允許，還是奮不顧身投入下去。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x12() {
+            var r = confirm("愛情敲門來囉，單相思的你不要再隱藏在黑暗中了，因為幸福都已經主動來敲門了，怎麼可以悶不吭聲、不加以回應呢，有告白的機會就千萬不要錯過囉。已經有伴侶的人，也千萬要珍惜這段良緣哦。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x13() {
+            var r = confirm("愛情的甜蜜讓你從心裡頭暖到外頭，恨不得能將這些甜蜜都分享給周遭知道。尋找新戀情的人也要注意了，因為一段奇妙的邂逅即將展開。有情人終成眷屬，千萬別錯過良緣唷！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x14() {
+            var r = confirm("心靈上相當契合，可說是一拍即合。但是切勿操之過急。現階段就先由朋友做起，慢慢建立起更深厚的感情，只要專心一意，必然能夠獲得幸福的結局。在那之前，多培養彼此相通的興趣吧！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x15() {
+            var r = confirm("若在單戀的階段，那麼就快點採取積極的攻勢，勇氣與行動將幫助你搶先一步，取得機會，打敗情敵，擄獲心上人的心。若兩情相悅，兩人之間的感情將發展迅速，品嘗到愛情的甜蜜滋味，說不定，還有可能步入禮堂呢。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x16() {
+            var r = confirm("情緒不穩與不信任感是兩人之間最大的問題。避免太過情緒化的用詞，才不會造成兩人關係的決裂。還沒找到另一半的人也別操之過急，瞬間的迷戀並不表示真正的愛情，必須詳加考慮。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x17() {
+            var r = confirm("愛苗已經種下了，能不能成長茁壯就要看你的表現了。抱持背水一戰的決心，豁出去吧！畏畏縮縮、想得到又不想付出，談戀愛如果還怕受傷的話，那就乖乖享受單戀的滋味就好。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x18() {
+            var r = confirm("太過在意旁人的眼光和意見，造成自己的壓力，也造成對方的痛苦。愛情當中就怕人言可畏，偏偏你又跳脫不開，只能說雙方沒有緣分，若終究要分手，也只能祈禱能好聚好散吧。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x19() {
+            var r = confirm("如果無法捨棄你那可笑的自尊和驕傲，任何感情都無法持久。一昧地要求對方，強勢地要對方配合你。感情關係中充滿衝突和爭執，每過一日，都更加深對彼此的折磨。你需要學習如何真正愛人。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x20() {
+            var r = confirm("即使你有滿腔熱血，也要注意對方的反應，過度熱中或是一頭熱都容易導致失敗的下場。熱情帶來的盲目，也常會讓你無法客觀理性的看待這段感情，也聽不進去其他人的建議。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x21() {
+            var r = confirm("落花有意，流水無情，現在還不是告白的時候，所以你還是暫緩追求的行動吧。對愛情有著崇高理想的你，在追求真愛的路上總是特別不順遂，也許，結婚這檔事離你還有好長一段路吧！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x22() {
+            var r = confirm("飄忽不定的愛情，讓人無法掌握，處在忽冷忽熱的感情中，更讓人愈加煩躁。無法確認自己的心意，讓你無法踏出下一步。這不是一段適合你的戀情，勸你還是趁早放棄為佳。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x23() {
+            var r = confirm("心意無法相通，兩人之間存在有相當大的隔閡，比起實際的距離，兩人心的距離更加遙遠。漸行漸遠，最後終也步上分手一途。理想的對象還在遙遠的某一處，先習慣如何一個人過日子吧！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x24() {
+            var r = confirm("即使全心付出，仍舊得不到青睞。想要放棄卻還是不由自主地持續付出，作繭自縛，對沒有回報的戀情，感到痛苦不已。對於渺茫的目標，若不能放棄，除了忍耐之外，別無他法。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x25() {
+            var r = confirm("漸漸無法承擔心情上極大的負荷與壓力，興趣與生活上的差異，讓彼此的話題沒有交集，兩人的距離更是漸行漸遠。適合的對象，即使在一起也是折磨一場，不如還給彼此一個自由呼吸的空間吧。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x26() {
+            var r = confirm("過度美化心中的白馬王子形象，讓你回不到現實中，怎麼都無法真心去喜歡一個人。或是，喜歡上一個遙不可及的對象，展開一段逐夢式，自我滿足又自我厭惡的吳結果單戀。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x27() {
+            var r = confirm("即使死纏著對方，也無法使對方回心轉意，該放手的時候不放手，只會讓彼此的關係更加僵硬，人生沒有永遠的好運，別寄望一段沒有未來的愛情，學會放棄，有時，反而會有意外的好結果。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x28() {
+            var r = confirm("現在不是告白的好時機，有這個念頭的人，快趁早打消吧！在確定他對你的好感有多高之前，還是先觀察一段時間吧！最重要的是，要搞清楚他的為人，念的陷入深淵還不自知哦！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x29() {
+            var r = confirm("以為一切都在自己的掌握之中，但愛情的多變往往出乎意料，越希望掌控所有的狀況，越容易患得患失，傷害自己，也傷害了心愛的人。學會放手，愛情才能成長，傲氣而不霸氣，摩擦才能減少。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x30() {
+            var r = confirm("老是無法得到預期的回應讓你心煩意亂，不如先離開一陣子，沉靜心裡的感覺，分手不是世界末日，而是讓你重新調整心情，向前邁進到另一個更適合你的新天地，追求真正的快樂。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x31() {
+            var r = confirm("甜蜜的背後是謊言和背叛。因對方的忽冷忽熱而感到困惑和傷心，如果從一段感情中得到難過比幸福還多，那麼，快刀斬亂麻是最佳的方式，別為一段沒有未來與結果的感情，付出自己的所有。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x32() {
+            var r = confirm("一頭熱和單方面的付出是無法使感情長久的，尤其得不到期望中的回報時，無疑讓感情雪上加霜。而單戀一個永遠不會回頭的對象，只能獲得心碎的下場，可別奢望「等久了就是你的」這種神話。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x33() {
+            var r = confirm("太過一廂情願，死纏爛打的結果並無法讓你贏得心上人；花太多精神在對方身上，反而容易迷失自己；有戀情的人，可能會陷入感情停滯的狀況，這時要特別小心情敵的出現會讓你失去所愛。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x34() {
+            var r = confirm("忌妒、不安、懷疑，讓原本應該美好的愛情化成一段夢魘。理想的對象短時間內還不會出現，過度期盼只會帶來失望的下場。有心上人的人也要小心情敵的出現，戀情會因為情敵的出現而產生危機哦。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x35() {
+            var r = confirm("付出的一切都變成幻影，被過去的記憶和傷痛束縛，遲遲無法走出牢籠面對現況。放不開自己，放不開過去，看不到眼前正等待你珍惜的感情。結果，只是一再重複過去的錯誤罷了。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function Web() {
+            location.href = 'Web.html';
+        }
+        function HtmlPage1() {
+            location.href = 'HtmlPage1.html';
+        }
+        function drink() {
+            location.href = 'drink.html';
+        }
+    </script>
+
+    <div class="col-12">
+        <input type="button" value="回首頁" onclick="Web()" />
+    </div>
+
+
+    <img id="photo1" style="font-size:small" src='img/starting.png' onclick="change()">
+    <img id="photo2" src='img/starting.png' onclick="change()">
+    <img id="photo3" src='img/starting.png' onclick="change()">
+    <img id="photo4" src='img/starting.png' onclick="change()">
+    <img id="photo5" src='img/starting.png' onclick="change()">
+    <img id="photo6" src='img/starting.png' onclick="change()">
+    <img id="photo7" src='img/starting.png' onclick="change()">
+    <img id="photo8" src='img/starting.png' onclick="change()">
+    <img id="photo9" src='img/starting.png' onclick="change()">
+    <img id="photo10" src='img/starting.png' onclick="change()">
+    <img id="photo11" src='img/starting.png' onclick="change()">
+    <img id="photo12" src='img/starting.png' onclick="change()">
+    <img id="photo13" src='img/starting.png' onclick="change()">
+    <img id="photo14" src='img/starting.png' onclick="change()">
+    <img id="photo15" src='img/starting.png' onclick="change()">
+    <img id="photo16" src='img/starting.png' onclick="change()">
+    <img id="photo17" src='img/starting.png' onclick="change()">
+    <img id="photo18" src='img/starting.png' onclick="change()">
+    <img id="photo19" src='img/starting.png' onclick="change()">
+    <img id="photo20" src='img/starting.png' onclick="change()">
+    <img id="photo21" src='img/starting.png' onclick="change()">
+    <img id="photo22" src='img/starting.png' onclick="change()">
+    <img id="photo23" src='img/starting.png' onclick="change()">
+    <img id="photo24" src='img/starting.png' onclick="change()">
+    <img id="photo25" src='img/starting.png' onclick="change()">
+    <img id="photo26" src='img/starting.png' onclick="change()">
+    <img id="photo27" src='img/starting.png' onclick="change()">
+    <img id="photo28" src='img/starting.png' onclick="change()">
+    <img id="photo29" src='img/starting.png' onclick="change()">
+    <img id="photo30" src='img/starting.png' onclick="change()">
+    <img id="photo31" src='img/starting.png' onclick="change()">
+    <img id="photo32" src='img/starting.png' onclick="change()">
+    <img id="photo33" src='img/starting.png' onclick="change()">
+    <img id="photo34" src='img/starting.png' onclick="change()">
+    <img id="photo35" src='img/starting.png' onclick="change()">
+    <img id="photo36" src='img/starting.png' onclick="change()">
+
+</body>
+</html>
