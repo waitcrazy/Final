@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.5.0.min.js"></script>
+    <link href="bootstrap-4.5.0-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <title>抽牌介面(健康)</title>
+    <style>
+        #123 {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var x;
+        function change() {
+            x = parseInt(Math.random() * (36));
+            document.write('<img src="images/0' + x + '.png">');
+            if (x == 0) {
+                document.write('<br><font size="5">推薦飲料:泡沫紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x0()>');
+
+            }
+            if (x == 1) {
+                document.write('<br><font size="5">推薦飲料:蜂蜜檸檬');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x1()>');
+
+            }
+            if (x == 2) {
+                document.write('<br><font size="5">推薦飲料:茉莉綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x2()>');
+
+            }
+            if (x == 3) {
+                document.write('<br><font size="5">推薦飲料:檸檬綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x3()>');
+
+            }
+            if (x == 4) {
+                document.write('<br><font size="5">推薦飲料:四季青茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x4()>');
+
+            }
+            if (x == 5) {
+                document.write('<br><font size="5">推薦飲料:檸檬紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x5()>');
+
+            }
+            if (x == 6) {
+                document.write('<br><font size="5">推薦飲料:鐵觀音茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x6()>');
+            }
+            if (x == 7) {
+                document.write('<br><font size="5">推薦飲料:烏龍拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x7()>');
+            }
+            if (x == 8) {
+                document.write('<br><font size="5">推薦飲料:冬瓜茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x8()>');
+            }
+            if (x == 9) {
+                document.write('<br><font size="5">推薦飲料:冬瓜拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x9()>');
+            }
+            if (x == 10) {
+                document.write('<br><font size="5">推薦飲料:烏龍茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x10()>');
+            }
+            if (x == 11) {
+                document.write('<br><font size="5">推薦飲料:觀音拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x11()>');
+            }
+            if (x == 12) {
+                document.write('<br><font size="5">推薦飲料:百香多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x12()>');
+            }
+            if (x == 13) {
+                document.write('<br><font size="5">推薦飲料:四季拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x13()>');
+            }
+            if (x == 14) {
+                document.write('<br><font size="5">推薦飲料:綠茶多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x14()>');
+            }
+            if (x == 15) {
+                document.write('<br><font size="5">推薦飲料:綠茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x15()>');
+            }
+            if (x == 16) {
+                document.write('<br><font size="5">推薦飲料:檸檬多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x16()>');
+            }
+            if (x == 17) {
+                document.write('<br><font size="5">推薦飲料:紅茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x17()>');
+            }
+            if (x == 18) {
+                document.write('<br><font size="5">推薦飲料:紅茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x18()>');
+            }
+            if (x == 19) {
+                document.write('<br><font size="5">推薦飲料:泡沫紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x19()>');
+            }
+            if (x == 20) {
+                document.write('<br><font size="5">推薦飲料:百香多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x20()>');
+            }
+            if (x == 21) {
+                document.write('<br><font size="5">推薦飲料:檸檬紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x21()>');
+            }
+            if (x == 22) {
+                document.write('<br><font size="5">推薦飲料:綠茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x22()>');
+            }
+            if (x == 23) {
+                document.write('<br><font size="5">推薦飲料:茉莉綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x23()>');
+            }
+            if (x == 24) {
+                document.write('<br><font size="5">推薦飲料:綠茶多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x24()>');
+            }
+            if (x == 25) {
+                document.write('<br><font size="5">推薦飲料:檸檬綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x25()>');
+            }
+            if (x == 26) {
+                document.write('<br><font size="5">推薦飲料:四季拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x26()>');
+            }
+            if (x == 27) {
+                document.write('<br><font size="5">推薦飲料:四季青茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x27()>');
+            }
+            if (x == 28) {
+                document.write('<br><font size="5">推薦飲料:檸檬多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x28()>');
+            }
+            if (x == 29) {
+                document.write('<br><font size="5">推薦飲料:蜂蜜檸檬');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x29()>');
+            }
+            if (x == 30) {
+                document.write('<br><font size="5">推薦飲料:觀音拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x30()>');
+            }
+            if (x == 31) {
+                document.write('<br><font size="5">推薦飲料:烏龍茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x31()>');
+            }
+            if (x == 32) {
+                document.write('<br><font size="5">推薦飲料:冬瓜拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x32()>');
+            }
+            if (x == 33) {
+                document.write('<br><font size="5">推薦飲料:冬瓜茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x33()>');
+            }
+            if (x == 34) {
+                document.write('<br><font size="5">推薦飲料:鐵觀音茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x34()>');
+            }
+            if (x == 35) {
+                document.write('<br><font size="5">推薦飲料:烏龍拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x35()>');
+            }
+
+            document.title = "答案";
+        }
+        function x0() {
+            var r = confirm("聽從專業的指導，調整身心的平衡，皮膚才能恢復健康。發覺胸口鬱悶的時候，就快尋求旁人的協助，盡可能將注意力從使你憂愁的事物上轉移開來。可以將偶爾遇到的小倒楣看作是幸運來臨的前兆哦~");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x1() {
+            var r = confirm("健康狀況極佳。精力充沛，喜愛追求榮譽，有時有點不通人情，不知變通，非常執著自己的想法，不會空做白日夢，化想法於實際行動，執行力相當地高，也非常務實。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x2() {
+            var r = confirm("體力充沛、精力過旺，好的營養讓你容光煥發，改變形象，享受美的事物，時時注意自己的一言一舉，優雅美麗的態度會讓你的魅力指數直直上升，異性緣相對也提升不少哦！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x3() {
+            var r = confirm("做好肌膚的保養，同時充實內在的知性與感性，你所散發出來的魅力就幾乎是無人可擋。平日多走些藝廊、美術展覽，也是提升知性與感性的方式之一。雖然說外在美很重要，但內在美絕對是加分的關鍵哦！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x4() {
+            var r = confirm("試著改變外在形象，可以試試新髮型或不同風格的衣服，會給人煥然一新的感覺，也為自己帶來美好的心情。多接觸大自然，舒展平日課業或工作上帶來的壓力，也可鍛鍊健康的身心。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x5() {
+            var r = confirm("出門走走吧，甚至可以安排個國外旅遊，讓身心靈都得到放鬆和滿足。控制好生活的節奏，每天都過得充實而愉悅，人生還很漫長，想做什麼都不嫌晚，健康是你最大的資產。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x6() {
+            var r = confirm("健康狀況時好時壞，必須隨時注意自己的身體。一天兩天的調養是沒有效果的，必須要長期抗戰的心理準備，戒除掉過去所有的惡習，遵照醫師或營養師的指示，才能徹底改善身體狀況。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x7() {
+            var r = confirm("經過了大病小病的侵襲，身體總算逐漸康復起來，這個時候，就該吃些營養的食物，做些健身的運動，該睡的時候不要熬夜，作息正常，好好休養，就能長久享受一個健康的身體。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x8() {
+            var r = confirm("老毛病的產生往往都來自體質上的先天不足，後天失調。尋求專業的建議，從生活習慣和環境下手，很快的，你就能感受到擺脫老毛病的愉悅和輕鬆。散發健康的光彩，讓你看起來更迷人。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x9() {
+            var r = confirm("透過運動來紓解生活上的各種壓力，保持神清氣爽，所有病痛自然會遠離你。保持好奇心與挑戰心，新鮮的事物帶來生活的刺激，日子能過得快樂充實，心靈也能夠常保青春。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x10() {
+            var r = confirm("計畫性的減肥，加上足夠的耐力，可以感覺到越變越美麗的自己。健康的外表與充沛的精力是你的魅力來源。定時的運動與營養的進食，隨著信心的提高，魅力指數也會直線上升哦。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x11() {
+            var r = confirm("身體不舒服時，不要過度依賴藥物，雖然藥效能讓你快速獲得舒服的感覺，同時也漸漸地侵襲你的身體。若有失眠的現象，找出失眠的原因加以排除，千萬別依賴安眠藥，否則會墜入惡行循環的迴圈中。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x12() {
+            var r = confirm("綻放笑容，那就是你的魅力所在。學會施展自己的魅力與優點，多注意自己的外表，稍稍的改變與裝扮，就能為你帶來自信與勇氣。同時，感受到魔法般的嶄新生活樂趣。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x13() {
+            var r = confirm("精力旺盛，適合從事戶外的運動。全身散發健康的光芒，不必害怕疾病的侵擾。對人生充滿幹勁，擁有豐富的生命力，彷彿有耗不完的精力，催促著你不斷向前邁進喔。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x14() {
+            var r = confirm("多運動，培養體力，出門走走也許是個不錯的方法。只不過要小心陽光的過度曝曬。出門前記得做好防曬準備。感到身體不適要立刻找出原因，該休息就休息，該補充的營養就要補充。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x15() {
+            var r = confirm("體力充沛，適合運動的時機。趁此時，多多運動跑步，能夠提升身體的免疫力，免於流行感冒的侵襲。養成固定的運動習慣和好的飲食習慣，你就是名副其實的百病不侵的健康寶寶。反射神經發達的你，能夠對周遭事物做出立即的判斷。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x16() {
+            var r = confirm("不舒服的狀況有好轉的現象，可別在這時太過大意，疏於照顧好自己的身體，可是很容易讓虛弱的身體還來不急康復，又由好轉壞哦。女孩子的話，容易月事不順，更要小心自己的身體。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x17() {
+            var r = confirm("最近不是東一個頭痛，西一個腳痛，就是胃在作祟，腦在作怪，遇到好醫師後，總算有好轉的現象。心情方面，多嘗試些新鮮的事物，去走走沒走過的地方，可以成功地轉換心情喔。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x18() {
+            var r = confirm("日復一日的疲勞，加上精神壓力一直無法獲得紓解，日積月累之下，情緒和身體都已經達到緊繃的狀態，呈現抑鬱的徵狀，好好檢視日常的作息和行事曆，暫且放開俗務，享受心靈淨空，讓腦袋和心都能呼吸。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x19() {
+            var r = confirm("獨斷、偏見、無法接受別人的勸告，即使身體有病痛也不願就醫，放任病痛持續惡化，該休養的時候不肯放下工作，對成功、權力、榮譽有非分之想，生活充滿緊繃和競爭。");
+            if (r == false) {
+                HtmlPage1();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x20() {
+            var r = confirm("壓力一來就吃東西，小心胖的速度像吹氣球一樣快，瘦的速度象龜在爬。太過油膩的食物也盡量不要碰，容易長出最讓人害怕的青春痘哦！化妝的時候有要謹慎，別弄巧成拙，畫出不適合自己的妝。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x21() {
+            var r = confirm("對自我的要求過高，會導致壓力的產生，即使到了夜晚，也會心煩意亂的無法入眠，白日則因睡眠不足而呈現精神渙散的狀態。長久下來，疲勞不斷累積，給人的感覺也就總是陰沉沉的。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x22() {
+            var r = confirm("日夜顛倒，生活作息不穩定，加上外在的壓力，導致身心上都出現不舒服的狀況。忽略自己身體不適的結果，只會讓情緒更加嚴重。過度封閉自己，不與外界接觸，不但讓自己陷入井底之蛙的狀況，也容易陷入憂鬱的狀態。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x23() {
+            var r = confirm("疲勞湧現，身心都感到懶洋洋的，只想放空腦袋和心靈，什麼也不想，什麼也不做，休息一下吧。深呼吸一口新鮮空氣，緊繃的頭腦並無法產生任何創意，還是出門走走，釋放一下長久的壓力和緊張吧！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x24() {
+            var r = confirm("過分依賴藥物讓身體的底子越來越壞。過度勉強自己也只是讓身體的疲勞不斷累積，如果還不知道節制，等到不支倒下之時，所有的後悔都為時已晚。不自己了解自己的身體，再多醫生也都救不了你。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x25() {
+            var r = confirm("攝取過多熱量高卻營養不足的食物，導致肥胖和身體健康的危機。體力日漸消弱，越來越容易感到力不從心。最好多攝取維他命，注意環境的整齊，以免容易惹來病毒的纏身。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x26() {
+            var r = confirm("平時不注重養身，吃沒吃好，營養攝取不均衡，加上眾多雜事纏身，使得你心力交瘁，腦筋逐漸失去思考的空間。適時來趟增廣見聞的旅行，到一個寧靜的地方，好好恢復原本的自己。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x27() {
+            var r = confirm("健康狀態很不穩定，時好時壞，讓你無法全力在課業或工作上。最好尋求專業的建議，耐心而長久的調理改變自己的身體狀況，否則，再這樣下去，健康狀況只會越來越糟而已喔，千萬要小心。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x28() {
+            var r = confirm("最近常常忘東忘西，腦袋昏昏沉沉，全身懶洋洋的，就是提不起勁。腦袋越慵懶，身體越是不想動，身體越是不動，腦袋越是慵懶，簡直就像陷入了無盡的迴圈一樣。還是多出走動一下吧！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x29() {
+            var r = confirm("睡眠不足，身材容易浮腫，皮膚也會變得粗糙。飲食方面，要小心消化不良的毛病，挑選溫和、容易消化的食物，切記暴飲暴食，或是有一餐沒一餐等的不正常的飲食習慣。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x30() {
+            var r = confirm("斬斷所有不良習性，像是習慣性熬夜或是徹夜狂歡，為了精神飽滿地迎接每一天早晨，而不是躺到日正當中、頭腦發昏，最好還是早睡早起，儘早將自己的作息調整到最佳狀態。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x31() {
+            var r = confirm("雖然說不必刻意花時間化妝打扮，但起碼要做到整潔清潔的門面。老是蓬頭垢面，只會帶給人沒精神的印象，相對的，也會讓自己覺得懶洋洋的。尤其，可別放著一頭毛躁的頭髮不理呀。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x32() {
+            var r = confirm("最近常感到莫名的疲累與精神不濟，頭痛、昏昏欲睡，做什麼都提不起勁來，夏天一到，要做好防曬工作，小心中暑。另外，不要做對體力負荷過大的工作或運動，容易對身體造成負擔。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x33() {
+            var r = confirm("最近總覺得意興闌珊，時常感到昏沉想睡，全身上下無精力。缺乏適度的運動導致健康危機。同時也要多注意飲食方面的問題，心情不佳又訴諸暴飲暴食，不但會看見一個肥嘟嘟的自己，還會讓健康亮起紅燈。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x34() {
+            var r = confirm("陷入低潮，情緒不穩定，過度的煩憂造成精神極大的壓力，需小心憂鬱症及精神方面的症狀。必要時，可以求助父母、老師，甚至可以尋求專業心理醫師給予建議。千萬別一個人鑽牛角尖！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x35() {
+            var r = confirm("長久以來的飲食和作息方式一直在挑戰著你身體的忍耐極限，看似無礙的外表，其實已經脆弱不堪，若還不及時醒悟，等到小病一起，大病就跟在後面，到時，千座金山銀山都換不回原本的健康。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function Web() {
+            location.href = 'Web.html';
+        }
+        function HtmlPage1() {
+            location.href = 'HtmlPage1.html';
+        }
+        function drink() {
+            location.href = 'drink.html';
+        }
+    </script>
+
+    <div class="col-12">
+        <input type="button" value="回首頁" onclick="Web()" />
+    </div>
+
+
+    <img id="photo1" style="font-size:small" src='img/starting.png' onclick="change()">
+    <img id="photo2" src='img/starting.png' onclick="change()">
+    <img id="photo3" src='img/starting.png' onclick="change()">
+    <img id="photo4" src='img/starting.png' onclick="change()">
+    <img id="photo5" src='img/starting.png' onclick="change()">
+    <img id="photo6" src='img/starting.png' onclick="change()">
+    <img id="photo7" src='img/starting.png' onclick="change()">
+    <img id="photo8" src='img/starting.png' onclick="change()">
+    <img id="photo9" src='img/starting.png' onclick="change()">
+    <img id="photo10" src='img/starting.png' onclick="change()">
+    <img id="photo11" src='img/starting.png' onclick="change()">
+    <img id="photo12" src='img/starting.png' onclick="change()">
+    <img id="photo13" src='img/starting.png' onclick="change()">
+    <img id="photo14" src='img/starting.png' onclick="change()">
+    <img id="photo15" src='img/starting.png' onclick="change()">
+    <img id="photo16" src='img/starting.png' onclick="change()">
+    <img id="photo17" src='img/starting.png' onclick="change()">
+    <img id="photo18" src='img/starting.png' onclick="change()">
+    <img id="photo19" src='img/starting.png' onclick="change()">
+    <img id="photo20" src='img/starting.png' onclick="change()">
+    <img id="photo21" src='img/starting.png' onclick="change()">
+    <img id="photo22" src='img/starting.png' onclick="change()">
+    <img id="photo23" src='img/starting.png' onclick="change()">
+    <img id="photo24" src='img/starting.png' onclick="change()">
+    <img id="photo25" src='img/starting.png' onclick="change()">
+    <img id="photo26" src='img/starting.png' onclick="change()">
+    <img id="photo27" src='img/starting.png' onclick="change()">
+    <img id="photo28" src='img/starting.png' onclick="change()">
+    <img id="photo29" src='img/starting.png' onclick="change()">
+    <img id="photo30" src='img/starting.png' onclick="change()">
+    <img id="photo31" src='img/starting.png' onclick="change()">
+    <img id="photo32" src='img/starting.png' onclick="change()">
+    <img id="photo33" src='img/starting.png' onclick="change()">
+    <img id="photo34" src='img/starting.png' onclick="change()">
+    <img id="photo35" src='img/starting.png' onclick="change()">
+    <img id="photo36" src='img/starting.png' onclick="change()">
+
+</body>
+</html>

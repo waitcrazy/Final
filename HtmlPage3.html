@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.5.0.min.js"></script>
+    <link href="bootstrap-4.5.0-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <title>抽牌介面(友情)</title>
+    <style>
+        #123 {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var x;
+        function change() {
+            x = parseInt(Math.random() * (36));
+            document.write('<img src="images/0' + x + '.png">');
+            if (x == 0) {
+                document.write('<br><font size="5">推薦飲料:泡沫紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x0()>');
+
+            }
+            if (x == 1) {
+                document.write('<br><font size="5">推薦飲料:蜂蜜檸檬');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x1()>');
+
+            }
+            if (x == 2) {
+                document.write('<br><font size="5">推薦飲料:茉莉綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x2()>');
+
+            }
+            if (x == 3) {
+                document.write('<br><font size="5">推薦飲料:檸檬綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x3()>');
+
+            }
+            if (x == 4) {
+                document.write('<br><font size="5">推薦飲料:四季青茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x4()>');
+
+            }
+            if (x == 5) {
+                document.write('<br><font size="5">推薦飲料:檸檬紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn btn-primary" onclick=x5()>');
+
+            }
+            if (x == 6) {
+                document.write('<br><font size="5">推薦飲料:鐵觀音茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x6()>');
+            }
+            if (x == 7) {
+                document.write('<br><font size="5">推薦飲料:烏龍拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x7()>');
+            }
+            if (x == 8) {
+                document.write('<br><font size="5">推薦飲料:冬瓜茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x8()>');
+            }
+            if (x == 9) {
+                document.write('<br><font size="5">推薦飲料:冬瓜拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x9()>');
+            }
+            if (x == 10) {
+                document.write('<br><font size="5">推薦飲料:烏龍茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x10()>');
+            }
+            if (x == 11) {
+                document.write('<br><font size="5">推薦飲料:觀音拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x11()>');
+            }
+            if (x == 12) {
+                document.write('<br><font size="5">推薦飲料:百香多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x12()>');
+            }
+            if (x == 13) {
+                document.write('<br><font size="5">推薦飲料:四季拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x13()>');
+            }
+            if (x == 14) {
+                document.write('<br><font size="5">推薦飲料:綠茶多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x14()>');
+            }
+            if (x == 15) {
+                document.write('<br><font size="5">推薦飲料:綠茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x15()>');
+            }
+            if (x == 16) {
+                document.write('<br><font size="5">推薦飲料:檸檬多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x16()>');
+            }
+            if (x == 17) {
+                document.write('<br><font size="5">推薦飲料:紅茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x17()>');
+            }
+            if (x == 18) {
+                document.write('<br><font size="5">推薦飲料:紅茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x18()>');
+            }
+            if (x == 19) {
+                document.write('<br><font size="5">推薦飲料:泡沫紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x19()>');
+            }
+            if (x == 20) {
+                document.write('<br><font size="5">推薦飲料:百香多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x20()>');
+            }
+            if (x == 21) {
+                document.write('<br><font size="5">推薦飲料:檸檬紅茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x21()>');
+            }
+            if (x == 22) {
+                document.write('<br><font size="5">推薦飲料:綠茶拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x22()>');
+            }
+            if (x == 23) {
+                document.write('<br><font size="5">推薦飲料:茉莉綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x23()>');
+            }
+            if (x == 24) {
+                document.write('<br><font size="5">推薦飲料:綠茶多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x24()>');
+            }
+            if (x == 25) {
+                document.write('<br><font size="5">推薦飲料:檸檬綠茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x25()>');
+            }
+            if (x == 26) {
+                document.write('<br><font size="5">推薦飲料:四季拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x26()>');
+            }
+            if (x == 27) {
+                document.write('<br><font size="5">推薦飲料:四季青茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x27()>');
+            }
+            if (x == 28) {
+                document.write('<br><font size="5">推薦飲料:檸檬多多');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x28()>');
+            }
+            if (x == 29) {
+                document.write('<br><font size="5">推薦飲料:蜂蜜檸檬');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x29()>');
+            }
+            if (x == 30) {
+                document.write('<br><font size="5">推薦飲料:觀音拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x30()>');
+            }
+            if (x == 31) {
+                document.write('<br><font size="5">推薦飲料:烏龍茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x31()>');
+            }
+            if (x == 32) {
+                document.write('<br><font size="5">推薦飲料:冬瓜拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x32()>');
+            }
+            if (x == 33) {
+                document.write('<br><font size="5">推薦飲料:冬瓜茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x33()>');
+            }
+            if (x == 34) {
+                document.write('<br><font size="5">推薦飲料:鐵觀音茶');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x34()>');
+            }
+            if (x == 35) {
+                document.write('<br><font size="5">推薦飲料:烏龍拿鐵');
+                document.write('<br><input type="button" value="顯示結果" class="btn" onclick=x35()>');
+            }
+
+            document.title = "答案";
+        }
+        function x0() {
+            var r = confirm("出現生命中的貴人，在你需要的時候扶你一把。本身體諒與善良的個性，讓你深得朋友信賴。在痛苦的時候，友情會是你最大的支柱。要常保有「我為人人，人人為我」的心哦！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x1() {
+            var r = confirm("負責、有擔當、實踐力高的你，常是團體中的領導者，好的競爭對象能讓你成長的更快。要找到知心的朋友並不容易，一旦找到，就能擁有堅毅的友誼。有時，朋友的忠言十分逆耳，需學習虛心接受。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x2() {
+            var r = confirm("開朗大方，很得人緣。也得長輩的疼愛。多接觸未知的領域，心情就會覺得充實，生活也會過得多采多姿，與人為善，在團體中很吃得開，甚至具有領導者的特質，大夥都願意主動幫你完成任務。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x3() {
+            var r = confirm("重視精神上的往來，所以並不刻意參與朋友間的聚會或社交場合，表面看似孤獨，卻反而多出更多自我的空間。無須勉強自己加入同儕的活動，自能交到真正心意相通、志趣相合的知己。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x4() {
+            var r = confirm("性格自由、開朗、奔放，容易結交到志同道合的朋友。喜歡冒險的你們，常為彼此帶來生活上的喜悅與驚喜；不需彼此束縛，擁有各自的空間比一天到晚黏在一起重要。永遠保持求新求變的心。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x5() {
+            var r = confirm("你的朋友眾多，真心真誠讓你們的友情堅定且長久，即使遇上了不得不分離的時刻，你們也必須相信，你們的友誼是不會有所改變，心靈契合的朋友，是不畏懼怕距離的阻隔。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x6() {
+            var r = confirm("朋友關係複雜，麻煩事纏身，讓你動彈不得。如果不曉得如何應付現前的人際狀況，最好懂得學會說不的藝術。眾多朋友不如一個知心的知己。做人無法樣樣擁有，懂得犧牲才能得到最好的。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x7() {
+            var r = confirm("雖然你對自己有很高的期許，但是一個人做不到的事，集合眾人的力量就能達成，謹記「三個臭皮匠勝過一個諸葛亮」，付出你所知的，並從朋友身上，學到你所尚未知的部分。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x8() {
+            var r = confirm("在團體中，你可說是人緣還不錯的傢伙，總是會結交到不少新朋友，和朋友之間的切磋琢磨也讓你成長不少。若與朋友之間有所爭執，也不必太在意，順其自然，一切隨緣。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x9() {
+            var r = confirm("圓滑的處理態度，讓你非常適合幫人調解糾紛，是眾人當中的和事佬，因此，你的人緣向來都不錯，別人對你也相當信賴。遇到誤會，只要肯主動構通，通常也都會海闊天空的。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x10() {
+            var r = confirm("果斷的決策和執行的勇氣，通常讓你成為團體中的領導者，仰慕你的人會主動靠過來，人緣相對顯得相當不錯。不過，你要小心收斂自己倔強的個性，免得反而趕走一堆朋友。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x11() {
+            var r = confirm("重視精神上的往來，所以並不刻意參與朋友間的聚會或社交場合，表面看似孤獨，卻反而多出更多自我的空間。無須勉強自己加入同儕的活動，自能交到真正心意相通、志趣相合的知己。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x12() {
+            var r = confirm("交友中在交心，知性、知心的朋友，比只重視玩樂的酒肉朋友來的重要。不需要譁眾取寵，如果能夠心意相通、志同道合，即使只有一個，也能讓你感覺擁有了全世界的友誼。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x13() {
+            var r = confirm("真心的付出就能有所回報，敞開心胸接納朋友，就能獲得真正的友情。互相鼓勵、互相成長，學習彼此的優點，即使有所失意，朋友也能像陽光般給予你溫暖，適時扶你一把，是值得珍惜的友誼喔！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x14() {
+            var r = confirm("和朋友之間相處融洽，一人做不到的事情，只要集合眾人的力量就能達到。良好的溝通與協調是增進友誼的不二法門，和他人熱絡的討論交換意見，更能促進彼此間的成長。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x15() {
+            var r = confirm("聰明、自信與迅速的反應，使你常成為團體中的領導者。受到周圍的人的欽慕與敬佩。做人處事時，切記不要三心二意，果決的判斷會為你帶來好運，並且得到大家的支持。展現積極正面的態度，將使你的人緣不斷攀升。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x16() {
+            var r = confirm("許許多多的流言與誹謗，造成彼此的不信任，互相猜忌，懷疑的氣氛瀰漫在產生間隙的友情之間。要分辨真正的益友與損友，別讓不好的友情關係阻礙了真正朋友向你靠近的機會。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x17() {
+            var r = confirm("雖然有過短暫的不愉快，但是終將重修舊好。最近也有機會感受一下碰到許久不見的老朋友的喜悅。正視自己的心情，不無為盲從迎合別人，反而讓你的人緣指數直線上升哦。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x18() {
+            var r = confirm("天助自助者，別老是仰仗著朋友的幫助，再好心的人都承受不住你一而再再而三的請託。如果從沒試著自己想辦法解決問題，會越來越難得到周邊人的援助，畢竟，想站起來，還是得靠自己的雙腳呀。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x19() {
+            var r = confirm("過度驕傲自大，認為自己應該享有別人沒有的特權，缺乏同情心，也不懂得對他人付出關懷與體貼，堅信自己的想法是獨一無二的，無法接受別人的成功，如此怎會有人真心接近你。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x20() {
+            var r = confirm("愛猜忌、反覆無常的個性和眼高手低的態度，都令所有在你身邊的朋友感到吃不消。虛榮心太強也容易給人金玉其外的印象，如不能多學習虛心的態度，很快的，你就會嘗到孤獨的滋味。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x21() {
+            var r = confirm("孤高自傲，自命清高，不但容易與朋友產生嫌隙，冷淡的態度也讓人難以親近你。雖說有時你是以朋友的立場規勸其他人，然而，太過自以為是的口吻，常引來對方的誤會，最好多琢磨一下與人相處的方式。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x22() {
+            var r = confirm("太沉溺於自己的世界，不善與外界溝通，和朋友、甚至是家人之間都無法取得共識，容易讓自己陷於被孤立的狀態。不敞開心胸，是無法建立更多友誼的。獨斷獨行也是你的缺點之一。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x23() {
+            var r = confirm("你的生活圈固定，老朋友的感情都不錯，所以也沒主動積極的去認識些新朋友。不在乎旁人對你的看法，即使有人對你有所誤會，你也並不想費心去解釋，有緣相逢，無緣就散吧。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x24() {
+            var r = confirm("每個人都只想著自己的利益，無論你付出多少，都只被對方視為理所當然，在你需要的時候，卻又無法得到協助。如此痛苦的犧牲與奉獻，讓你覺得苦不堪言。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x25() {
+            var r = confirm("情緒起伏不定，容易和朋友發生口角爭執，加上不願向彼此低頭，導致感情越來越冷淡。除非放開心胸，低下身段，尋求溝通，否則就只有面臨僵化決裂的地步。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x26() {
+            var r = confirm("過度理想主義，吝於與他人分享自己的所知所學，孤高自傲，受到周遭人的排擠與厭惡，最終只會讓自己陷入井底之蛙的境地，看的只有自己看得到的天空。也結交不到真正的朋友。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x27() {
+            var r = confirm("不善說不的個性，雖然讓你看似有不少朋友，其實卻常常被拜託做東做西，明明有事，有不敢拒絕朋友的邀約，這樣下去，就會越來越沒有自己的時間，做些充實自己的事情囉！");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x28() {
+            var r = confirm("優柔寡斷又言行不致，容易招致誤為，若再加上態度太消極，不主動與人溝通，只會讓關係越來越僵。只會找藉口脫身的人，通常很不得人喜歡。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x29() {
+            var r = confirm("強硬的態度容易招來批評和誤解。過度誇張自己的實力，一旦真正面臨問題時，又反而容易不知所措。面對不當的流言傷害，不要倚靠旁人的協助，拿出勇氣，直接面對解決。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x30() {
+            var r = confirm("人際關係似乎進展得不是很順利，你愈想融入一個團體，愈覺得格格不入，愈希望能引起眾人的注意，愈覺得孤單，首先你必須學習的是不被周遭人的看法所影響和束縛，才能真正以真實的自我吸引到朋友的欣賞。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x31() {
+            var r = confirm("華麗的事物底下總是隱藏著傷人的刺，看似融合的團體，也許正暗潮洶湧，如果覺得無法融入這個團體，也許趁早抽身比較好，不與人為敵，也不用勉強改變自己去迎合別人的喜好。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x32() {
+            var r = confirm("太過我行我素，自我中心，容易和朋友發生衝突，一有誤解也難以放下身段和好，和朋友的關係於是日益惡化。若無法靜下心來反省自身的行為，將會使你失去更多的友誼。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x33() {
+            var r = confirm("自以為是，目中無人，過度賣弄自己能力的結果，只會讓你失去更多友誼。過度自我中心，容易忽視他人的感受與想法，也是交不到朋友的主要關鍵。焦躁的個性更容易與他人起衝突，要特別小心。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x34() {
+            var r = confirm("和朋友之間的嫌隙日漸擴大，無法化解的誤會演變成彼此相互不理的冷戰狀況。朋友的冷言冷語使你受傷，更加躲進自己孤獨的世界。變得對友情不信任，也無法對外界敞開心胸。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function x35() {
+            var r = confirm("動口總是比動腦快，所以總是在說了錯的話，傷了在意的人後，又來懊惱不已。太過倔強，又不能坦率面對他人的好意，不論是對自己或是對他人都是種沉重的負擔。試著樂觀點，別凡事往壞處想。");
+            if (r == false) {
+                Web();    //重新測驗
+            }
+            if (r == true) {
+                drink();
+            }
+        }
+        function Web() {
+            location.href = 'Web.html';
+        }
+        function HtmlPage1() {
+            location.href = 'HtmlPage1.html';
+        }
+        function drink() {
+            location.href = 'drink.html';
+        }
+    </script>
+
+    <div class="col-12">
+        <input type="button" value="回首頁" onclick="Web()" />
+    </div>
+
+
+    <img id="photo1" style="font-size:small" src='img/starting.png' onclick="change()">
+    <img id="photo2" src='img/starting.png' onclick="change()">
+    <img id="photo3" src='img/starting.png' onclick="change()">
+    <img id="photo4" src='img/starting.png' onclick="change()">
+    <img id="photo5" src='img/starting.png' onclick="change()">
+    <img id="photo6" src='img/starting.png' onclick="change()">
+    <img id="photo7" src='img/starting.png' onclick="change()">
+    <img id="photo8" src='img/starting.png' onclick="change()">
+    <img id="photo9" src='img/starting.png' onclick="change()">
+    <img id="photo10" src='img/starting.png' onclick="change()">
+    <img id="photo11" src='img/starting.png' onclick="change()">
+    <img id="photo12" src='img/starting.png' onclick="change()">
+    <img id="photo13" src='img/starting.png' onclick="change()">
+    <img id="photo14" src='img/starting.png' onclick="change()">
+    <img id="photo15" src='img/starting.png' onclick="change()">
+    <img id="photo16" src='img/starting.png' onclick="change()">
+    <img id="photo17" src='img/starting.png' onclick="change()">
+    <img id="photo18" src='img/starting.png' onclick="change()">
+    <img id="photo19" src='img/starting.png' onclick="change()">
+    <img id="photo20" src='img/starting.png' onclick="change()">
+    <img id="photo21" src='img/starting.png' onclick="change()">
+    <img id="photo22" src='img/starting.png' onclick="change()">
+    <img id="photo23" src='img/starting.png' onclick="change()">
+    <img id="photo24" src='img/starting.png' onclick="change()">
+    <img id="photo25" src='img/starting.png' onclick="change()">
+    <img id="photo26" src='img/starting.png' onclick="change()">
+    <img id="photo27" src='img/starting.png' onclick="change()">
+    <img id="photo28" src='img/starting.png' onclick="change()">
+    <img id="photo29" src='img/starting.png' onclick="change()">
+    <img id="photo30" src='img/starting.png' onclick="change()">
+    <img id="photo31" src='img/starting.png' onclick="change()">
+    <img id="photo32" src='img/starting.png' onclick="change()">
+    <img id="photo33" src='img/starting.png' onclick="change()">
+    <img id="photo34" src='img/starting.png' onclick="change()">
+    <img id="photo35" src='img/starting.png' onclick="change()">
+    <img id="photo36" src='img/starting.png' onclick="change()">
+
+</body>
+</html>
