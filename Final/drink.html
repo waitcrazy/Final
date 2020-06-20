@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <meta charset="utf-8"></meta>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+    <style>
+        .editing {
+            font-size: 30px;
+            background-color: #F5E8FF;
+        }
+
+        .form-control {
+            font-size: 24px;
+            background-color: #F5E8FF;
+        }
+
+        .btn-primary {
+            background-color: #A830FF;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function ($) {
+
+            var tb = '<h1>飲料品項</h1>';
+
+            var menu = [
+                { item: "泡沫紅茶", price: 25 },
+                { item: "茉莉綠茶", price: 25 },
+                { item: "四季青茶", price: 25 },
+                { item: "鐵觀音茶", price: 25 },
+                { item: "冬瓜茶", price: 25 },
+                { item: "烏龍茶", price: 25 },
+                { item: "紅茶拿鐵", price: 50 },
+                { item: "綠茶拿鐵", price: 50 },
+                { item: "四季拿鐵", price: 50 },
+                { item: "觀音拿鐵", price: 50 },
+                { item: "冬瓜拿鐵", price: 50 },
+                { item: "烏龍拿鐵", price: 50 },
+                { item: "檸檬紅茶", price: 40 },
+                { item: "檸檬綠茶", price: 40 },
+                { item: "蜂蜜檸檬", price: 40 },
+                { item: "檸檬多多", price: 35 },
+                { item: "多多綠茶", price: 35 },
+                { item: "百香多多", price: 35 },
+            ]
+
+            tb += '<table class="table table-hover">'
+            tb += '<thead>';
+            tb += '<tr>';
+            tb += '<th><h2>品項</h2></th>';
+            tb += '<th><h2>單價</h2></th>';
+            tb += '<th><h2>甜度</h2></th>';
+            tb += '<th><h2>冰塊</h2></th>';
+            tb += '<th><h2>杯數</h2></th>';
+            tb += '<th><h2>加入購物車</h2></th>';
+            tb += '</tr>';
+            tb += '</thead>';
+
+            tb += '<tbody>';
+            $.each(menu, function (index, val) {
+                tb += '<tr>';
+                tb += '<td><h2><div class="item">' + val['item'] + '</h2></div></td>';
+                tb += '<td><h2><div class="price">' + val['price'] + '</h2></div></td>';
+
+                tb += '<td><div class="sweet"><select class="form-control" style="width:120px;height:60px">';
+                tb += '<option value="0">全糖</option>';
+                tb += '<option value="1">少糖</option>';
+                tb += '<option value="2">半糖</option>';
+                tb += '<option value="3">微糖</option>';
+                tb += '<option value="4">無糖</option>';
+                tb += '</select></div></td>';
+
+                tb += '<td><div class="ice"><select class="form-control" style="width:120px;height:60px">';
+                tb += '<option value="0">正常</option>';
+                tb += '<option value="1">少冰</option>';
+                tb += '<option value="2">微冰</option>';
+                tb += '<option value="3">去冰</option>';
+                tb += '</select></div></td>';
+
+                tb += '<td><div class="amount">';
+                tb += '<input name="amount" type="number" value="1" min="1" style="width:50px;height:60px" class="editing"/>';
+                tb += '</div></td>';
+
+                tb += '<td><span class="btn_order" ><button type="button" class="btn btn-primary" >加入</button></span></td>';
+                tb += '</tr>';
+            });
+            tb += '</tbody>';
+            tb += '</table>';
+            //加入購物車按鈕
+            $(document).find('.menu_table').html(tb);
+            var car_id = 1;
+            var total = 0;
+            $(document).on('click', '.btn_order', function (event) {
+                var tb_row = $(this).closest('tr');
+                var row_item = tb_row.find('.item').html();
+                var row_price = tb_row.find('.price').html();
+                var row_ice = tb_row.find('.ice :selected').text();
+                var row_sweet = tb_row.find('.sweet :selected').text();
+                var row_amount = tb_row.find('.editing').val();
+                var row_money = 0;
+                var car_row = $(document).find('.shopping_data');
+                var car_data = '';
+                row_money = parseInt(row_price) * parseInt(row_amount);
+                car_data += '<tr><td>' + row_item + '</td>' + '<td>' + row_sweet + '</td>' + '<td>' + row_ice + '</td>' + '<td>' + row_amount + '</td>' + '<td><div class="money">' + row_money + '</div></td>';
+                car_data += '<td> <span class="btn_cancle"><button class="btn btn-danger" type="button">移除</button></span></td></tr> ';
+
+                $(car_row).append(car_data);
+
+                total += row_money;
+                $(document).find('.total').html(total);
+
+            });
+            //移除按鈕
+            $(document).on('click', '.btn_cancle', function (event) {
+
+                var tb_row = $(this).closest('tr');
+                var row_money = tb_row.find('.money').html();
+                total = total - parseInt(row_money);
+                $(document).find('.total').html(total);
+                $(this).parent().parent().remove();
+
+            });
+
+            //送出訂單按鈕
+            $(document).on('click', '.btn_send', function (event) {
+                prompt('請輸入地址');
+                prompt('請輸入電話');
+            });
+
+
+
+        });
+    </script>
+</head>
+
+<body style="background-color:#E8C9FF">
+    <div>
+
+        <div class="menu_table" style="float:left;width:50%"></div>
+
+        <div class="shopping_car" style="float:right;width:45%;font-size:30px">
+            <h1>購物車</h1>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th><h2>品項</h2></th>
+                        <th><h2>甜度</h2></th>
+                        <th><h2>冰塊</h2></th>
+                        <th><h2>杯數</h2></th>
+                        <th><h2>價錢</h2></th>
+                        <th><h2>　</h2></th>
+                    </tr>
+                </thead>
+                <tbody class="shopping_data"></tbody>
+            </table>
+            <hr />
+            <div style="float: right">
+                合計
+                <span class="total">0</span>
+                <span>　　　　</span>
+                <span class="btn_send"><button type="button" class="btn btn-primary" style="float:right">送出訂單</button></span>
+
+            </div>
+            <div>
+                <br /><br /><br />
+                <center><span class="btn_back"><button type="button" class="btn btn-primary" onclick="location.href='Web.html'">返回首頁</button></span></center>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
